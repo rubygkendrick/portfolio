@@ -1,4 +1,5 @@
 import "./Sidebar.css";
+import devPhoto from "../assets/devPhoto.jpg";
 
 function Sidebar() {
   return (
@@ -30,7 +31,7 @@ function Sidebar() {
           <br />
           Kendrick
         </div>
-  <div className="name-sub">FULL-STACK DEVELOPER</div>
+        <div className="name-sub">FULL-STACK DEVELOPER</div>
       </div>
 
       <div
@@ -42,7 +43,7 @@ function Sidebar() {
         }}
       >
         <img
-          src="/src/assets/devPhoto.jpg"
+          src={devPhoto}
           alt="Ruby Kendrick"
           style={{ width: "100%", borderRadius: "6px", display: "block" }}
         />
