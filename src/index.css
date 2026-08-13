@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Space+Grotesk:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@500;600;700&family=Space+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -10,10 +10,10 @@
   --bg: #0D0D0D;
   --bg2: #111111;
   --bg3: #1a1a1a;
-  --yellow: #FDD107;
-  --amber: #F5B301;
-  --periwinkle: #8987F7;
-  --periwinkle-dark: #6563F2;
+  --yellow: #F2B800;
+  --pink: #E8366A;
+  --red: #E84B2A;
+  --teal: #2ABFAA;
   --white: #EFEFEF;
   --muted: #666;
   --border: #222;
@@ -27,7 +27,7 @@ body {
   background: var(--bg);
   color: var(--white);
   font-family: 'Space Grotesk', sans-serif;
-  font-size: 14px;
+  font-size: 20px;
   line-height: 1.6;
   min-height: 100vh;
 }

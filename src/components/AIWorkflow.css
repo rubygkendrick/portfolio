@@ -1,28 +1,27 @@
 .ai-box {
-  background: var(--bg2);
-  border: 1px solid var(--border);
-  border-left: 2px solid var(--periwinkle);
+  background: url("/src/assets/paper-texture.jpg") center/cover;
+  border: 1px solid #333;
+  border-left: 3px solid var(--teal);
   border-radius: 6px;
   padding: 20px 24px;
   position: relative;
 }
 
 .ai-box::before {
-  content: '//';
   position: absolute;
   top: -1px;
   right: 16px;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: "JetBrains Mono", monospace;
   font-size: 10px;
-  color: var(--periwinkle);
+  color: var(--teal);
   background: var(--bg2);
   padding: 0 6px;
 }
 
 .ai-box p {
-  font-size: 15px;
-  color: #bbb;
-  line-height: 1.85;
+  font-size: 20px;
+  color: #2a2a2a;
+  line-height: 1.8;
 }
 
 .ai-box p + p {
