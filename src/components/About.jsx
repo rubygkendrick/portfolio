@@ -15,17 +15,16 @@ function About() {
 
       <div className="ai-box">
         <p className="about-text">
-          I'm a full-stack developer with a background that runs through
-          songwriting, real estate, and code. I've been a working songwriter in
-          Nashville for over a decade, with a studio here in town and records
-          out on New West, Aerobic International, and Chowtown. Before pivoting
-          to development, I spent five years as a licensed broker, managing
-          client relationships, digital marketing, and the full arc of a real
-          estate transaction. For the past two years I've been doing that same
-          work as a freelance developer, building and maintaining websites for
-          clients across music, real estate, and small business, owning projects
-          from brief to launch. Reading rooms, managing expectations, and taking
-          full ownership of outcomes has been the through-line of my career.
+          I'm a full-stack developer with a background in songwriting, real
+          estate, and code. I've been a working songwriter in Nashville for over
+          a decade with a studio here in town and records on New West, Aerobic
+          International, and Chowtown. Before pivoting to development I worked
+          in real estate, holding a broker's license from 2021 to 2024. For the
+          past two years I've been freelancing as a developer, building and
+          maintaining websites for clients across music, real estate, and small
+          businesses, owning projects from brief to launch. Reading rooms,
+          managing expectations, and taking full ownership of outcomes has been
+          the through-line of my career.
         </p>
         <p className="about-text">
           React is where I feel most at home on the technical side. I build

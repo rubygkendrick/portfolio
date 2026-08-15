@@ -58,7 +58,39 @@ function ProjectsCarousel() {
             <a className="proj-link" href={proj.href} target="_blank" rel="noreferrer">{proj.link}</a>
             <p className="proj-desc">{proj.desc}</p>
             <div className="proj-tags">
-              {proj.tags.map(t => <span key={t} className="proj-tag">{t}</span>)}
+              {proj.tags.map((s, i) => {
+              const colors = [
+                "rgba(232,54,106,0.75)",
+                "rgba(232,75,42,0.75)",
+                "rgba(242,184,0,0.75)",
+                "rgba(42,191,170,0.75)",
+              ];
+              const bg = colors[i % colors.length];
+              return (
+                <span
+                  key={s}
+                  className="skill-tag"
+                  style={{
+                    background: bg,
+                    border: "none",
+                    color: "#1A1A1A",
+                    fontWeight: "600",
+                    transition: "transform 0.15s, box-shadow 0.15s",
+                    cursor: "default",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.target.style.transform = "scale(1.08)";
+                    e.target.style.boxShadow = `0 4px 12px ${bg}`;
+                  }}
+                  onMouseLeave={(e) => {
+                    e.target.style.transform = "scale(1)";
+                    e.target.style.boxShadow = "none";
+                  }}
+                >
+                  {s}
+                </span>
+              );
+            })}
             </div>
           </div>
         ))}

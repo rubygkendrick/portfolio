@@ -1,6 +1,53 @@
 import "./Sidebar.css";
 import devPhoto from "../assets/devPhoto.jpg";
 
+const skillColors = [
+  "rgba(232,54,106,0.75)",
+  "rgba(232,75,42,0.75)",
+  "rgba(242,184,0,0.75)",
+  "rgba(42,191,170,0.75)",
+];
+
+function SkillTag({ s, i }) {
+  const bg = skillColors[i % skillColors.length];
+  return (
+    <span
+      className="skill-tag"
+      style={{
+        background: bg,
+        border: "none",
+        color: "#1A1A1A",
+        fontWeight: "600",
+        transition: "transform 0.15s, box-shadow 0.15s",
+        cursor: "default",
+      }}
+      onMouseEnter={(e) => {
+        e.target.style.transform = "scale(1.08)";
+        e.target.style.boxShadow = `0 4px 12px ${bg}`;
+      }}
+      onMouseLeave={(e) => {
+        e.target.style.transform = "scale(1)";
+        e.target.style.boxShadow = "none";
+      }}
+    >
+      {s}
+    </span>
+  );
+}
+
+function SkillGroup({ label, skills }) {
+  return (
+    <div className="skill-group">
+      <div className="skill-group-label">{label}</div>
+      <div className="skill-tags">
+        {skills.map((s, i) => (
+          <SkillTag key={s} s={s} i={i} />
+        ))}
+      </div>
+    </div>
+  );
+}
+
 function Sidebar() {
   return (
     <aside className="sidebar">
@@ -60,6 +107,7 @@ function Sidebar() {
         </div>
         <div className="contact-item">
           <span className="contact-bullet"></span>
+
           <a
             href="https://github.com/rubygkendrick"
             target="_blank"
@@ -75,80 +123,67 @@ function Sidebar() {
 
       <div className="sidebar-section">
         <div className="sidebar-label">Skills</div>
-        <div className="skill-group">
-          <div className="skill-group-label">Languages</div>
-          <div className="skill-tags">
-            {[
-              "JavaScript",
-              "TypeScript",
-              "React",
-              "C#/.NET",
-              "HTML",
-              "CSS",
-              "SQL",
-            ].map((s, i) => {
-              const colors = [
-                "rgba(232,54,106,0.75)",
-                "rgba(232,75,42,0.75)",
-                "rgba(242,184,0,0.75)",
-                "rgba(42,191,170,0.75)",
-              ];
-              const bg = colors[i % colors.length];
-              return (
-                <span
-                  key={s}
-                  className="skill-tag"
-                  style={{
-                    background: bg,
-                    border: "none",
-                    color: "#1A1A1A",
-                    fontWeight: "600",
-                  }}
-                >
-                  {s}
-                </span>
-              );
-            })}
-          </div>
-        </div>
-        <div className="skill-group">
-          <div className="skill-group-label">Backend & Data</div>
-          <div className="skill-tags">
-            {[
-              "Node.js",
-              "Express",
-              "PostgreSQL",
-              "Prisma",
-              "JWT",
-              "REST APIs",
-              "Entity Framework",
-              "ADO.NET",
-            ].map((s) => (
-              <span key={s} className="skill-tag">
-                {s}
-              </span>
-            ))}
-          </div>
-        </div>
-        <div className="skill-group">
-          <div className="skill-group-label">Cloud & Tools</div>
-          <div className="skill-tags">
-            {[
-              "AWS",
-              "GitHub Actions",
-              "Three.js",
-              "Blender",
-              "Squarespace",
-              "Shopify",
-              "Figma",
-              "Vite",
-            ].map((s) => (
-              <span key={s} className="skill-tag">
-                {s}
-              </span>
-            ))}
-          </div>
-        </div>
+
+        <SkillGroup
+          label="Languages"
+          skills={[
+            "JavaScript",
+            "TypeScript",
+            "React",
+            "C#/.NET",
+            "HTML",
+            "CSS",
+            "SQL",
+          ]}
+        />
+
+        <SkillGroup
+          label="Backend & Data"
+          skills={[
+            "Node.js",
+            "Express",
+            "PostgreSQL 16",
+            "Prisma ORM",
+            "Entity Framework Core",
+            "RESTful APIs",
+            "ADO.NET",
+            "JWT",
+            "bcryptjs",
+          ]}
+        />
+
+        <SkillGroup
+          label="Libraries & Tools"
+          skills={[
+            "Vite",
+            "Three.js",
+            "Git/GitHub",
+            "GitHub Actions",
+            "VS Code",
+            "Figma",
+            "Squarespace",
+            "Shopify",
+            "Asana",
+            "Postman",
+            "Miro",
+          ]}
+        />
+
+        <SkillGroup
+          label="Cloud & Deployment"
+          skills={["AWS (S3, CloudFront, IAM, ACM)", "CI/CD pipelines"]}
+        />
+
+        <SkillGroup
+          label="3D & Design"
+          skills={[
+            "Blender",
+            "Adobe Photoshop",
+            "Final Cut Pro",
+            "UI/UX wireframing",
+            "Print & digital production",
+          ]}
+        />
       </div>
 
       <div className="sidebar-section">
@@ -158,12 +193,12 @@ function Sidebar() {
           <div className="edu-org">Full Stack Bootcamp · 2024</div>
         </div>
         <div className="edu-item">
-          <div className="edu-title">University of Georgia</div>
-          <div className="edu-org">Landscape Architecture · 2008–2012</div>
+          <div className="edu-title">TN Real Estate License</div>
+          <div className="edu-org">Tennessee Real Estate Commission · 2021</div>
         </div>
         <div className="edu-item">
-          <div className="edu-title">TN Real Estate License</div>
-          <div className="edu-org">Tennessee Real Estate Commission</div>
+          <div className="edu-title">University of Georgia</div>
+          <div className="edu-org">Landscape Architecture · 2008–2012</div>
         </div>
       </div>
     </aside>
