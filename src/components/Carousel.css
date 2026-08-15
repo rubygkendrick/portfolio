@@ -154,8 +154,8 @@
 
 /* PROJECT CARDS */
 .proj-card {
-  min-width: 600px;
-  max-width: 600px;
+  min-width: min(600px, 85vw);
+  max-width: min(600px, 85vw);
   background: url("/src/assets/paper-texture.jpg") center/cover;
   border: 1px solid #333;
   border-radius: 8px;
