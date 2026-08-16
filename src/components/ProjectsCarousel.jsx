@@ -7,14 +7,21 @@ const projects = [
     link: "dev.rubykendrick.com",
     href: "https://dev.rubykendrick.com",
     desc: "This portfolio site, built from scratch in React with Vite. Deployed to AWS with S3 static hosting, CloudFront for fast global delivery, an SSL certificate via Amazon Certificate Manager, custom domain via GoDaddy, and a GitHub Actions pipeline that auto-deploys on every push to main. Designed with a vintage Japanese cassette aesthetic using custom CSS, paper texture, and rainbow stripe details.",
-    tags: ['React', 'Vite', 'AWS', 'GitHub Actions', 'JavaScript'],
+    tags: ["React", "Vite", "AWS", "GitHub Actions", "JavaScript"],
   },
   {
     name: "Budget Dashboard",
     link: "github.com/rubygkendrick/budget-dashboard",
     href: "https://github.com/rubygkendrick/budget-dashboard",
     desc: 'Full-stack personal finance application. Users track transactions, manage accounts, set per-category spending budgets, create savings goals, and view financial reports with charts. Stack: React, TypeScript, Vite, Node.js, Express, PostgreSQL 16, Prisma ORM, JWT auth, Recharts. Built an AI financial assistant into the app using the Anthropic API. The backend fetches the user\'s real financial data (balances, recent transactions, budgets, goals) and sends it as context with each message, so the assistant can answer questions like "How much did I spend on groceries this month?" with accurate, personalized answers. The architecture required thinking carefully about what context to include, how to structure it for the model, and how to handle the backend data-fetching layer cleanly.',
-    tags: ['React', 'TypeScript', 'Node.js', 'PostgreSQL 16', 'Prisma ORM', 'Anthropic API'],
+    tags: [
+      "React",
+      "TypeScript",
+      "Node.js",
+      "PostgreSQL 16",
+      "Prisma ORM",
+      "Anthropic API",
+    ],
   },
   {
     name: "Butterfly World",
@@ -41,8 +48,10 @@ const projects = [
 
 function ProjectsCarousel() {
   const ref = useRef(null);
-  const scroll = (dir) =>
-    ref.current.scrollBy({ left: dir * 320, behavior: "smooth" });
+  const scroll = (dir) => {
+    const cardWidth = ref.current.querySelector(".proj-card").offsetWidth + 16;
+    ref.current.scrollBy({ left: dir * cardWidth, behavior: "smooth" });
+  };
 
   return (
     <section className="section">
