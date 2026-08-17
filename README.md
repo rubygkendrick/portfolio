@@ -1,16 +1,43 @@
-# React + Vite
+# dev.rubykendrick.com
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal developer resume for Ruby Kendrick
+Full-stack developer, working songwriter, and former real estate broker based in Nashville, TN.
 
-Currently, two official plugins are available:
+Live at [dev.rubykendrick.com](https://dev.rubykendrick.com)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Tech Stack
 
-## React Compiler
+- React + Vite
+- CSS (custom, no framework)
+- React Three Fiber + Three.js (3D dragonfly)
+- AWS S3 (static hosting)
+- AWS CloudFront (CDN + HTTPS)
+- AWS ACM (SSL certificate)
+- GitHub Actions (CI/CD — auto-deploys on push to main)
+- GoDaddy (DNS)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Running Locally
 
-## Expanding the ESLint configuration
+```bash
+npm install
+npm run dev
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Deployment
+
+Every push to `main` triggers a GitHub Actions workflow that:
+1. Installs dependencies
+2. Runs `npm run build`
+3. Syncs the `dist/` folder to S3
+4. Invalidates the CloudFront cache
+
+## Design Reference
+
+Aesthetic inspired by vintage Japanese VHS and cassette tape packaging — bold flat color, paper texture, and rainbow stripe details.
+
+![Cassette reference](https://i.pinimg.com/1200x/17/fd/29/17fd29534a3cc60b9854b2eb9d7f0b64.jpg)
+![Cassette reference 2](https://i.pinimg.com/736x/93/93/75/939375bcacd6c3fb1dc76dc781f7541d.jpg)
+
+## Credits
+
+3D dragonfly model: ["Giant spiketail (Anotogaster sieboldii)"](https://skfb.ly/pvBMG) by butterflybliss, licensed under [Creative Commons Attribution 4.0](http://creativecommons.org/licenses/by/4.0/).

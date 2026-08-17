@@ -6,8 +6,8 @@ const projects = [
     name: "dev.rubykendrick.com",
     link: "dev.rubykendrick.com",
     href: "https://dev.rubykendrick.com",
-    desc: "This portfolio site, built from scratch in React with Vite. Deployed to AWS with S3 static hosting, CloudFront for fast global delivery, an SSL certificate via Amazon Certificate Manager, custom domain via GoDaddy, and a GitHub Actions pipeline that auto-deploys on every push to main. Designed with a vintage Japanese cassette aesthetic using custom CSS, paper texture, and rainbow stripe details.",
-    tags: ["React", "Vite", "AWS", "GitHub Actions", "JavaScript"],
+    desc: "This portfolio site, built from scratch in React with Vite. Features an animated 3D dragonfly rendered with React Three Fiber and a GLB model. Deployed to AWS with S3 static hosting, CloudFront for fast global delivery, an SSL certificate via Amazon Certificate Manager, custom domain via GoDaddy, and a GitHub Actions pipeline that auto-deploys on every push to main. Designed with a vintage Japanese cassette aesthetic using custom CSS, paper texture, and rainbow stripe details.",
+    tags: ["React", "Vite", "Three.js", "AWS", "GitHub Actions", "JavaScript"],
   },
   {
     name: "Budget Dashboard",

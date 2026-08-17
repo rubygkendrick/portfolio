@@ -1,5 +1,6 @@
 import "./Sidebar.css";
 import devPhoto from "../assets/devPhoto.jpg";
+import Dragonfly from "./Dragonfly";
 
 const skillColors = [
   "rgba(232,54,106,0.75)",
@@ -67,7 +68,8 @@ function Sidebar() {
       <div className="corner-tl"></div>
       <div className="corner-br"></div>
 
-      <div className="name-block">
+      <div className="name-block" style={{ position: "relative" }}>
+        <Dragonfly />
         <div className="dot-grid">
           {Array.from({ length: 12 }).map((_, i) => (
             <span key={i}></span>
