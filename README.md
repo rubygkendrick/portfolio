@@ -1,6 +1,6 @@
 # dev.rubykendrick.com
 
-Personal developer resume for Ruby Kendrick
+This is my resume! 
 Full-stack developer, working songwriter, and former real estate broker based in Nashville, TN.
 
 Live at [dev.rubykendrick.com](https://dev.rubykendrick.com)
@@ -33,7 +33,7 @@ Every push to `main` triggers a GitHub Actions workflow that:
 
 ## Design Reference
 
-Aesthetic inspired by vintage Japanese VHS and cassette tape packaging — bold flat color, paper texture, and rainbow stripe details.
+Aesthetic inspired by vintage Japanese VHS and cassette tape packaging. Bold flat color, paper texture, and rainbow stripe details.
 
 ![Cassette reference](https://i.pinimg.com/1200x/17/fd/29/17fd29534a3cc60b9854b2eb9d7f0b64.jpg)
 ![Cassette reference 2](https://i.pinimg.com/736x/93/93/75/939375bcacd6c3fb1dc76dc781f7541d.jpg)
