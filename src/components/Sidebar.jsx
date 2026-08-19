@@ -193,6 +193,7 @@ function Sidebar() {
         <div className="edu-item">
           <div className="edu-title">Nashville Software School</div>
           <div className="edu-org">Full Stack Bootcamp · 2024</div>
+          <div className="edu-org">Advanced SQL for Developers · 2024</div>
         </div>
         <div className="edu-item">
           <div className="edu-title">TN Real Estate License</div>
